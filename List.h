@@ -14,7 +14,7 @@ public:
     virtual int search(T e) = 0;
     virtual bool empty() = 0;
     virtual int size() = 0;
-    virtual ~List() {} // Destructor virtual para clases base
+    virtual ~List() {}
 };
 
 #endif
