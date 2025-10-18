@@ -1,29 +1,20 @@
 #ifndef LIST_H
 #define LIST_H
 
-#include <stdexcept>
-
 template <typename T>
 class List {
 public:
-    virtual void insert(int pos, T e) = 0;
-    virtual void append(T e) = 0;
-    virtual void prepend(T e) = 0;
-    virtual T remove(int pos) = 0;
-    virtual T get(int pos) = 0;
-    virtual int search(T e) = 0;
-    virtual bool empty() = 0;
-    virtual int size() = 0;
+    // Destructor virtual
     virtual ~List() {}
+
+    // Métodos abstractos (puros) que deben implementarse en las clases derivadas
+    virtual int size() const = 0;          // devuelve el número de elementos
+    virtual bool empty() const = 0;        // indica si la lista está vacía
+    virtual void insert(int pos, T e) = 0; // inserta el elemento e en la posición pos
+    virtual T get(int pos) = 0;            // devuelve el elemento en la posición pos
+    virtual T remove(int pos) = 0;         // elimina y devuelve el elemento en la posición pos
+    virtual int search(T e) = 0;           // devuelve el índice del elemento e, o -1 si no está
 };
 
-#endif
-
-
-
-
-
-
-
-
+#endif // LIST_H
 
