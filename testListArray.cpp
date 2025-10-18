@@ -2,7 +2,7 @@
 #include "ListArray.h"
 
 int main(){
-    std::cout << std::boolalpha; // configuramos cout para mostrar true/false en lugar de 0/1.
+    std::cout << std::boolalpha; 
 
     ListArray<int> list;
 
